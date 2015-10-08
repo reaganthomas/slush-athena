@@ -1,9 +1,8 @@
-# athena-api-generator
-Slush generator for APIs
-
 ```
      ___       ___           
  /\   |  |__| |__  |\ |  /\  
 /~~\  |  |  | |___ | \| /~~\ 
                              
 ```
+
+Slush generator for APIs
