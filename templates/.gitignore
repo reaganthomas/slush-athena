@@ -1,0 +1,27 @@
+# Dist files
+dist/
+target/
+
+# Node Modules
+node_modules/
+
+# OS X Junk
+.DS_Store
+
+# Documentation
+docs/
+
+# Npm debug log
+npm-debug.log
+
+# Test Coverage
+coverage/
+
+# Test db
+db/
+
+# Intellij project files
+.idea/
+
+# New Relic logs
+newrelic_agent.log
