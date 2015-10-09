@@ -23,6 +23,6 @@
   gulp.task('help', require('gulp-task-listing'));
 
   gulp.task('default', function(cb) {
-    runSequence(['clean'], ['move'], cb);
+    runSequence(['clean'], ['lint'], ['move'], cb);
   });
 })();
