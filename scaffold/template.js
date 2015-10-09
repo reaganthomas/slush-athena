@@ -9,6 +9,8 @@
   var install = require('gulp-install');
   var gulp = require('gulp');
 
+  const mongooseSpecificDir = '!' + __dirname + '/../templates/server/config/seed/**/*';
+
   var moveTemplates = _.curry(function(done, answers) {
     if (!answers.moveon) {
       return done();
@@ -16,7 +18,13 @@
 
     answers.appNameSlug = slugify(answers.appName);
 
-    gulp.src(__dirname + '/../templates/**/*', { dot: true })
+    let gulpSrc = [__dirname + '/../templates/**/*'];
+
+    if(!answers.mongoose) {
+      gulpSrc.push(mongooseSpecificDir);
+    }
+
+    gulp.src(gulpSrc, { dot: true })
       .pipe(template(answers))
       .pipe(rename(renameScheme))
       .pipe(conflict('./'))
