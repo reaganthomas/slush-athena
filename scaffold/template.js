@@ -16,7 +16,7 @@
 
     answers.appNameSlug = slugify(answers.appName);
 
-    gulp.src(__dirname + '/../templates/**')
+    gulp.src(__dirname + '/../templates/**/*', { dot: true })
       .pipe(template(answers))
       .pipe(rename(renameScheme))
       .pipe(conflict('./'))
