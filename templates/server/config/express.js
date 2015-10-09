@@ -6,10 +6,12 @@
   var bodyParser = require('body-parser');
   var express = require('express');
   var path = require('path');
-  
+
   var config = require('./environment');
 
   module.exports = function(app) {
+    app.disable('x-powered-by');
+
     let env = app.get('env');
 
     app.engine('html', require('ejs').renderFile);
