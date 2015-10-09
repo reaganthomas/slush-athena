@@ -14,7 +14,7 @@
     "express": "^4.13.3",
     "method-override": "^2.3.5",
     "mongoose": "^4.1.8",
-    "ramda": "^0.17.1",
+    "ramda": "^0.17.1"
   },
   "devDependencies": {
     "babel": "^5.8.23",
