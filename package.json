@@ -1,20 +1,22 @@
 {
-    "name": "slush-athena-api-generator",
-    "description": "Slush generator for gesto APIs",
-    "version": "0.1.0",
-    "main": "slushfile.js",
-    "scripts": {
-        "test": "echo \"No tests\""
-    },
-    "dependencies": {
-        "slush": ">=1.0.0",
-        "gulp": "^3.6.2",
-        "gulp-template": "^0.1.1",
-        "gulp-install": "^0.1.4",
-        "gulp-conflict": "^0.1.1",
-        "gulp-rename": "^1.2.0",
-        "underscore.string": "^2.3.3",
-        "inquirer": "^0.8.0",
-        "iniparser": "^1.0.5"
-    }
+  "name": "slush-athena-api-generator",
+  "description": "Slush generator for gesto APIs",
+  "version": "0.1.0",
+  "main": "slushfile.js",
+  "scripts": {
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "babel": "^5.8.23",
+    "gulp": "^3.6.2",
+    "gulp-conflict": "^0.1.1",
+    "gulp-install": "^0.1.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^0.1.1",
+    "iniparser": "^1.0.5",
+    "inquirer": "^0.8.0",
+    "ramda": "^0.17.1",
+    "slush": ">=1.0.0",
+    "underscore.string": "^2.3.3"
+  }
 }
