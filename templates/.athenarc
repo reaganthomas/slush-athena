@@ -1,3 +1,4 @@
 {
-  "name": "<%= appNameSlug =>"
+  "name": "<%= appNameSlug %>",
+  "mongoose": <%= mongoose %>
 }
