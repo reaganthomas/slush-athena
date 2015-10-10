@@ -3,7 +3,6 @@
 
   var _ = require('ramda');
   var slugify = require('underscore.string').slugify;
-  var rename = require('gulp-rename');
   var template = require('gulp-template');
   var conflict = require('gulp-conflict');
   var install = require('gulp-install');
