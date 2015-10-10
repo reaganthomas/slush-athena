@@ -1,12 +1,12 @@
 (function IIFE() {
   'use strict';
 
-  var _ = require('ramda');
   var slugify = require('underscore.string').slugify;
-  var template = require('gulp-template');
   var conflict = require('gulp-conflict');
+  var template = require('gulp-template');
   var install = require('gulp-install');
   var gulp = require('gulp');
+  var _ = require('ramda');
 
   const mongooseSpecificDir = '!' + __dirname + '/../templates/server/config/seed/**/*';
 
