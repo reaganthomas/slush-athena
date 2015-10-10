@@ -7,6 +7,7 @@
   var inquirer = require('inquirer');
 
   var scaffold = require('./scaffold');
+  var model = require('./model');
 
   gulp.task('default', function(done) {
     inquirer.prompt(scaffold.prompts, scaffold.template(done));
