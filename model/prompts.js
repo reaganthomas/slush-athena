@@ -9,7 +9,7 @@
         var done = this.async();
 
         if(/^([A-Z][a-z]+){1,3}$/.test(input)) {
-          done();
+          done(true);
         } else {
           done('Model name must be capital case, with a maximum of 3 words.');
         }
