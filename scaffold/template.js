@@ -26,19 +26,12 @@
 
     gulp.src(gulpSrc, { dot: true })
       .pipe(template(answers))
-      .pipe(rename(renameScheme))
       .pipe(conflict('./'))
       .pipe(gulp.dest('./'))
       .pipe(install())
       .on('end', function() {
         done();
       });
-
-    function renameScheme(file) {
-      if (file.basename[0] === '_') {
-        file.basename = '.' + file.basename.slice(1);
-      }
-    }
   });
 
   module.exports = moveTemplates;
