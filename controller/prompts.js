@@ -2,7 +2,7 @@
   'use strict';
 
   function makePrompts(defaults) {
-    const prompts = Object.freeze([{
+    var prompts = Object.freeze([{
       name: 'controllerName',
       message: 'What is the name of your controller?',
       validate: function(input) {

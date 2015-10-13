@@ -2,7 +2,7 @@
   'use strict';
 
   function makePrompts(defaults) {
-    const prompts = Object.freeze([{
+    var prompts = Object.freeze([{
       name: 'modelName',
       message: 'What is the name of your model?',
       validate: function(input) {

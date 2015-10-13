@@ -1,7 +1,7 @@
 (function IIFE() {
   'use strict';
 
-  let defaults = {};
+  var defaults = {};
 
   module.exports = defaults;
 })();

@@ -8,7 +8,7 @@
   var gulp = require('gulp');
   var _ = require('ramda');
 
-  const mongooseSpecificDir = '!' + __dirname + '/../templates/server/config/seed/**/*';
+  var mongooseSpecificDir = '!' + __dirname + '/../templates/server/config/seed/**/*';
 
   var moveTemplates = _.curry(function(done, answers) {
     if (!answers.moveon) {
@@ -17,7 +17,7 @@
 
     answers.appNameSlug = slugify(answers.appName);
 
-    let gulpSrc = [__dirname + '/../templates/**/*'];
+    var gulpSrc = [__dirname + '/../templates/**/*'];
 
     if(!answers.mongoose) {
       gulpSrc.push(mongooseSpecificDir);

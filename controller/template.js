@@ -16,13 +16,13 @@
       return done();
     }
 
-    let controllerWords = answers.controllerName.match(/[A-Z][a-z]+/g);
-    let controllerFirstLetter = answers.controllerName[0].toLowerCase();
+    var controllerWords = answers.controllerName.match(/[A-Z][a-z]+/g);
+    var controllerFirstLetter = answers.controllerName[0].toLowerCase();
 
     answers.controllerLower = controllerWords.join('-').toLowerCase();
     answers.controllerRoute = controllerFirstLetter + controllerWords.join('').slice(1);
 
-    let gulpSrc = [__dirname + '/templates/**/*'];
+    var gulpSrc = [__dirname + '/templates/**/*'];
 
     gulp.src(gulpSrc, { dot: true })
       .pipe(template(answers))
