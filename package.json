@@ -1,7 +1,7 @@
 {
   "name": "slush-athena",
   "description": "Slush generator for APIs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "slushfile.js",
   "scripts": {
     "test": "echo \"No tests\""
