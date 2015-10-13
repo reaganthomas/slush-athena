@@ -1,5 +1,5 @@
 {
-  "name": "slush-athena-api-generator",
+  "name": "athena-api",
   "description": "Slush generator for APIs",
   "version": "0.1.0",
   "main": "slushfile.js",
