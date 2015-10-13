@@ -15,7 +15,7 @@
       return done();
     }
 
-    let athenarc = jsonfile.readFileSync('./.athenarc');
+    var athenarc = jsonfile.readFileSync('./.athenarc');
 
     if(athenarc && !athenarc.mongoose) {
       return done('Project scaffolded without mongoose; cannot scaffold model.');
@@ -23,7 +23,7 @@
 
     answers.modelLower = answers.modelName.match(/[A-Z][a-z]+/g).join('-').toLowerCase();
 
-    let gulpSrc = [__dirname + '/templates/**/*'];
+    var gulpSrc = [__dirname + '/templates/**/*'];
 
     gulp.src(gulpSrc, { dot: true })
       .pipe(template(answers))
