@@ -1,6 +1,6 @@
 {
   "name": "slush-athena-api-generator",
-  "description": "Slush generator for gesto APIs",
+  "description": "Slush generator for APIs",
   "version": "0.1.0",
   "main": "slushfile.js",
   "scripts": {
