@@ -31,7 +31,8 @@
     "gulp-task-listing": "^1.0.1",
     "jshint-stylish": "^2.0.1",
     "node-mocks-http": "^1.4.4",
-    "run-sequence": "^1.1.4"
+    "run-sequence": "^1.1.4",
+    "supertest": "^1.1.0"
   },
   "scripts": {
     "start": "gulp clean && gulp lint && gulp move && node server",
