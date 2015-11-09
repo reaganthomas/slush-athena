@@ -3,7 +3,7 @@
 
   module.exports = {
     <% if(mongoose) { %>mongo: {
-      uri: 'mongodb://localhost/gesto-payments-dev'
+      uri: 'mongodb://localhost/<%= appNameSlug %>-dev'
     }<% } %>
   };
 })();
