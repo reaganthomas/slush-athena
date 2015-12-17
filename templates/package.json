@@ -9,6 +9,7 @@
     "chalk": "^1.1.1",
     "compression": "^1.5.2",
     "connect-livereload": "^0.5.3",
+    "deepmerge": "^0.2.10",
     "ejs": "^2.3.4",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",

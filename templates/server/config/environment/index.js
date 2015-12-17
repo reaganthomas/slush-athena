@@ -2,7 +2,7 @@
   'use strict';
 
   var path = require('path');
-  var _ = require('ramda');
+  var deepmerge = require('deepmerge');
 
   let all = {
     env: process.env.NODE_ENV,
@@ -19,5 +19,6 @@
   };
 
   /* istanbul ignore next */
-  module.exports = _.mergeAll([all, require('./' + process.env.NODE_ENV + '.js') || {}]);
+  module.exports = deepmerge([all, require('./' + process.env.NODE_ENV + '.js') || {}]);
+
 })();
