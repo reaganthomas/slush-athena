@@ -2,7 +2,6 @@
   'use strict';
 
   var path = require('path');
-  var _ = require('ramda');
   var deepmerge = require('deepmerge');
 
   let all = {
