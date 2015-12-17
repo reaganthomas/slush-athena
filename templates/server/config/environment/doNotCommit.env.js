@@ -3,7 +3,7 @@
 
   // Environment variables and production values not to be comitted to repo but needed for development.
   const config = {
-    // CLIENT_SECRET: 345912384fjwasif3p9w8fj (aws secret)
+    // clientSecret: 345912384fjwasif3p9w8fj (aws secret)
   };
 
   module.exports = config;
