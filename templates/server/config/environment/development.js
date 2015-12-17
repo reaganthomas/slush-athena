@@ -4,7 +4,7 @@
   module.exports = {
     port: 9000<% if(mongoose) { %>,
     mongo: {
-      uri: 'mongodb://localhost/<%= appNameSlug %>'
+      uri: 'mongodb://localhost/<%= appNameSlug %>-dev'
     }<% } %>
   };
 })();
