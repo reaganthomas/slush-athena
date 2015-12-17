@@ -10,7 +10,7 @@
     root: path.normalize(__dirname + '/../..'),
     port: process.env.PORT || 9000,
     <% if(mongoose) { %>mongo: {
-      uri: 'mongodb://localhost/<%= appNameSlug %>-dev',
+      uri: process.env.MONGO_URI ||'mongodb://localhost/<%= appNameSlug %>-dev',
       options: {
         db: {
           safe: true
@@ -19,13 +19,7 @@
     }<% } %>
   };
 
-  let envVars = {
-    port: process.env.PORT<% if(mongoose) { %>,
-    mongo: {
-      uri: process.env.MONGO_URI
-    }<% } %>
-  };
-
   /* istanbul ignore next */
-  module.exports = deepmerge([all, require('./' + process.env.NODE_ENV + '.js') || {}, envVars]);
+  module.exports = deepmerge([all, require('./' + process.env.NODE_ENV + '.js') || {}]);
+
 })();
