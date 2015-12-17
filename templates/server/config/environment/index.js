@@ -1,15 +1,18 @@
 (function IIFE() {
   'use strict';
 
-  var path = require('path');
-  var deepmerge = require('deepmerge');
+  const path = require('path');
+  const deepmerge = require('deepmerge');
 
-  let all = {
+  // These are required properties for the application to run.
+  // Do not define environment-specific settings here.
+  // Use the appropriate environment file for specific configuration.
+  const requiredConfiguration = {
     env: process.env.NODE_ENV,
     root: path.normalize(__dirname + '/../..'),
-    port: process.env.PORT || 9000,
+    port: null,
     <% if(mongoose) { %>mongo: {
-      uri: process.env.MONGO_URI ||'mongodb://localhost/<%= appNameSlug %>-dev',
+      uri: null,
       options: {
         db: {
           safe: true
@@ -19,6 +22,12 @@
   };
 
   /* istanbul ignore next */
-  module.exports = deepmerge([all, require('./' + process.env.NODE_ENV + '.js') || {}]);
+  let envConfig = deepmerge(requiredConfiguration, require('./' + process.env.NODE_ENV) || {});
+
+  if(process.env.NODE_ENV !== 'production') {
+    envConfig = deepmerge(envConfig, require('./doNotCommit.env'));
+  }
+
+  module.exports = envConfig;
 
 })();
