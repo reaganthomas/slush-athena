@@ -5,6 +5,9 @@ target/
 # Node Modules
 node_modules/
 
+# Env Override File
+server/config/environment/doNotCommit.env.js
+
 # OS X Junk
 .DS_Store
 
