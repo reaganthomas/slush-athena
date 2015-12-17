@@ -2,8 +2,9 @@
   'use strict';
 
   module.exports = {
-    <% if(mongoose) { %>mongo: {
-      uri: 'mongodb://localhost/<%= appNameSlug %>-dev'
+    port: 9000<% if(mongoose) { %>,
+    mongo: {
+      uri: 'mongodb://localhost/<%= appNameSlug %>'
     }<% } %>
   };
 })();

@@ -3,7 +3,7 @@
 
   module.exports = {
     <% if(mongoose) { %>mongo: {
-      uri: 'mongodb://localhost/<%= appNameSlug %>-test'
+      uri: 'mongodb://localhost/<%= appNameSlug %>'
     }<% } %>
   };
 })();
