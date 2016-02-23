@@ -2,7 +2,7 @@
   'use strict';
 
   function exampleMethod(req, res, next) {
-    return res.status(404).json({});
+    return res.sendStatus(404);
   }
 
   module.exports = {

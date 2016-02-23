@@ -31,7 +31,7 @@
     "supertest": "^1.1.0"
   },
   "scripts": {
-    "start": "gulp lint && node server",
+    "start": "node server/app",
     "test": "gulp test"
   }
 }
