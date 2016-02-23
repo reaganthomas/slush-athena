@@ -10,7 +10,7 @@
   }
 
   const express = require('express');
-  <% if(mongoose) { %>var mongoose = require('mongoose');<% } %>
+  <% if(mongoose) { %>const mongoose = require('mongoose');<% } %>
 
   const config = require('./config/environment');
 
