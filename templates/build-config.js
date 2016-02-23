@@ -1,12 +1,12 @@
 (function IIFE() {
   'use strict';
 
-  var gulpLoadPlugins = {
+  const gulpLoadPlugins = {
     scope: ['devDependencies'],
     rename: {}
   };
 
-  var istanbul = {
+  const istanbul = {
     thresholds: {
       global: 0,
       each: 0

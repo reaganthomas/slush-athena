@@ -1,14 +1,12 @@
 (function IIFE() {
   'use strict';
 
-  require('babel/register');
+  const runSequence = require('run-sequence');
+  const gulp = require('gulp');
 
-  var runSequence = require('run-sequence');
-  var gulp = require('gulp');
+  const config = require('./build-config');
 
-  var config = require('./build-config');
-
-  var plugins = require('gulp-load-plugins')(config.gulpLoadPlugins);
+  let plugins = require('gulp-load-plugins')(config.gulpLoadPlugins);
       plugins.exec = require('child_process').exec;
       plugins.del = require('del');
 
@@ -23,6 +21,6 @@
   gulp.task('help', require('gulp-task-listing'));
 
   gulp.task('default', function(cb) {
-    runSequence(['clean'], ['lint'], ['move'], cb);
+    runSequence(['lint'], cb);
   });
 })();

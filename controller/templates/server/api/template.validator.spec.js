@@ -1,16 +1,16 @@
 (function IIFE() {
   'use strict';
 
-  var _ = require('ramda');
-  var expect = require('chai').expect;
-  var request = require('supertest');
-  var httpMocks = require('node-mocks-http');
+  const _ = require('ramda');
+  const expect = require('chai').expect;
+  const request = require('supertest');
+  const httpMocks = require('node-mocks-http');
 
-  var validator = require('./<%= controllerLower %>');
+  const validator = require('./<%= controllerLower %>');
 
-  var req;
-  var res;
-  var body;
+  let req;
+  let res;
+  let body;
 
   describe('<%= controllerName %> validator', function() {
     beforeEach(function(done) {

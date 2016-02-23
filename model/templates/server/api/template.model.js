@@ -1,10 +1,10 @@
 (function IIFE() {
   'use strict';
 
-  var mongoose = require('mongoose');
-  var Schema = mongoose.Schema;
+  const mongoose = require('mongoose');
+  const Schema = mongoose.Schema;
 
-  var <%= modelName %>Schema = new Schema({
+  const <%= modelName %>Schema = new Schema({
     // Insert model specifications here
   });
 
