@@ -2,10 +2,14 @@
   'use strict';
 
   module.exports = {
-    port: process.env.PORT || throw new Error('PORT not defined')<% if(mongoose) { %>,
+    port: process.env.PORT || fatal('PORT not defined')<% if(mongoose) { %>,
     mongo: {
-      uri: process.env.MONGO_URI || throw new Error('MONGO_URI not defined'),
+      uri: process.env.MONGO_URI || fatal('MONGO_URI not defined'),
       autoIndex: false
     }<% } %>
   };
+
+  function fatal(message) {
+    throw new Error(message);
+  }
 })();
