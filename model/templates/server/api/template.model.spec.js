@@ -1,9 +1,9 @@
 (function IIFE() {
   'use strict';
 
-  var expect = require('chai').expect;
+  const expect = require('chai').expect;
 
-  var <%= modelName %> = require('./<%= modelLower %>.model');
+  const <%= modelName %> = require('./<%= modelLower %>.model');
 
   describe('<%= modelName %> Model', function() {
     afterEach(function(done) {

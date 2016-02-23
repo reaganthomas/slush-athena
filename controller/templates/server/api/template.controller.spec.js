@@ -1,13 +1,13 @@
 (function IIFE() {
   'use strict';
 
-  var request = require('supertest');
-  var chai = require('chai');
+  const request = require('supertest');
+  const chai = require('chai');
 
-  var app = require('../../app');
-  var expect = chai.expect;
-  var contentType = 'Content-Type';
-  var json = /json/;
+  const app = require('../../app');
+  const expect = chai.expect;
+  const contentType = 'Content-Type';
+  const json = /json/;
 
   describe('<%= controllerName %> controller', function() {
     it('should heartbeat the example route', function(done) {

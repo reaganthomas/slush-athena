@@ -22,12 +22,6 @@
   };
 
   /* istanbul ignore next */
-  let envConfig = deepmerge(requiredConfiguration, require('./' + process.env.NODE_ENV) || {});
-
-  if(process.env.NODE_ENV !== 'production') {
-    envConfig = deepmerge(envConfig, require('./doNotCommit.env'));
-  }
-
-  module.exports = envConfig;
+  module.exports = deepmerge(requiredConfiguration, require('./' + process.env.NODE_ENV) || {});
 
 })();

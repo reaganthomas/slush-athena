@@ -1,13 +1,13 @@
 (function IIFE() {
   'use strict';
 
-  var methodOverride = require('method-override');
-  var compression = require('compression');
-  var bodyParser = require('body-parser');
-  var express = require('express');
-  var path = require('path');
+  const methodOverride = require('method-override');
+  const compression = require('compression');
+  const bodyParser = require('body-parser');
+  const express = require('express');
+  const path = require('path');
 
-  var config = require('./environment');
+  const config = require('./environment');
 
   module.exports = function(app) {
     app.disable('x-powered-by');

@@ -1,10 +1,10 @@
 (function IIFE() {
   'use strict';
 
-  var router = require('express').Router();
+  const router = require('express').Router();
 
-  var controller = require('./<%= controllerLower %>.controller');
-  var validator = require('./<%= controllerLower %>.validator');
+  const controller = require('./<%= controllerLower %>.controller');
+  const validator = require('./<%= controllerLower %>.validator');
 
   router.get('/example', validator.exampleMethod, controller.exampleMethod);
 

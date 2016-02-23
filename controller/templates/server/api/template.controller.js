@@ -1,10 +1,8 @@
 (function IIFE() {
   'use strict';
 
-  var errorHandler = require('../../lib/errorHandler');
-
   function exampleMethod(req, res, next) {
-    return errorHandler.notFound(req, res);
+    return res.status(404).json({});
   }
 
   module.exports = {

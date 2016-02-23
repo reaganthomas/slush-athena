@@ -1,8 +1,6 @@
 (function IIFE() {
   'use strict';
 
-  require('babel/register');
-
   var runSequence = require('run-sequence');
   var gulp = require('gulp');
 
