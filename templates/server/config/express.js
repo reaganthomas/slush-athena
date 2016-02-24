@@ -6,6 +6,7 @@
   const bodyParser = require('body-parser');
   const express = require('express');
   const path = require('path');
+  const morgan = require('morgan');
 
   const config = require('./environment');
 
@@ -20,6 +21,7 @@
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(methodOverride());
+    app.use(morgan('dev'));
 
     app.use('/docs', express.static('docs'));
     app.set('appPath', path.join(config.root, 'docs'));
