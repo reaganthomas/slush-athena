@@ -4,9 +4,8 @@
   const router = require('express').Router();
 
   const controller = require('./<%= controllerLower %>.controller');
-  const validator = require('./<%= controllerLower %>.validator');
 
-  router.get('/example', validator.exampleMethod, controller.exampleMethod);
+  router.get('/example', controller.exampleMethod);
 
   module.exports = router;
 })();

@@ -5,7 +5,5 @@
     return res.sendStatus(404);
   }
 
-  module.exports = {
-    exampleMethod: exampleMethod
-  };
+  module.exports = exampleMethod;
 })();

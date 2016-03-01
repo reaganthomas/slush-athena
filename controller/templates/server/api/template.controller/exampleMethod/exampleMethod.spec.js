@@ -9,8 +9,8 @@
   const contentType = 'Content-Type';
   const json = /json/;
 
-  describe('<%= controllerName %> controller', function() {
-    it('should heartbeat the example route', function(done) {
+  describe('exampleMethod', function() {
+    it('should heartbeat', function(done) {
       request(app)
         .get('/api/<%= controllerRoute %>/example')
         .expect(contentType, json)
