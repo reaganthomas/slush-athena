@@ -21,24 +21,30 @@
       return done('Project scaffolded without mongoose; cannot scaffold model.');
     }
 
-    answers.modelLower = answers.modelName.charAt(0).toLowerCase() + answers.modelName.slice(1);
+    answers.modelCamelCase = answers.modelCapitalCase.charAt(0).toLowerCase() + answers.modelCapitalCase.slice(1);
+    answers.modelPlural = answers.modelPlural.charAt(0).toLowerCase() + answers.modelPlural.slice(1);
 
     var gulpSrc = [__dirname + '/templates/**/*'];
 
     gulp.src(gulpSrc, { dot: true })
       .pipe(template(answers))
-      .pipe(rename(addModelDirToPath))
+      .pipe(rename(addCrudDirToPath))
       .pipe(conflict('./'))
       .pipe(gulp.dest('./'))
       .on('end', function() {
+        console.info('Make sure to add this model\'s route to the server/api/index.js file');
         done();
       });
 
-    function addModelDirToPath(path) {
-      if(path.basename.indexOf('model') !== -1) {
-        path.dirname += '/' + answers.modelLower;
-        path.basename = path.basename.replace('template', answers.modelLower);
+    function addCrudDirToPath(path) {
+      if(path.dirname.indexOf('/api') !== -1) {
+        path.dirname = path.dirname.replace('/api', '/api/' + answers.modelCamelCase);
       }
+
+      path.dirname = path.dirname.replace(new RegExp('Template', 'g'), answers.modelCapitalCase);
+      path.dirname = path.dirname.replace(new RegExp('template', 'g'), answers.modelCamelCase);
+      path.basename = path.basename.replace(new RegExp('Template', 'g'), answers.modelCapitalCase);
+      path.basename = path.basename.replace(new RegExp('template', 'g'), answers.modelCamelCase);
     }
   });
 

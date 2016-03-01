@@ -21,7 +21,10 @@
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(methodOverride());
-    app.use(morgan('dev'));
+
+    if(env !== 'test') {
+      app.use(morgan('dev'));
+    }
 
     app.use('/docs', express.static('docs'));
     app.set('appPath', path.join(config.root, 'docs'));
@@ -29,7 +32,6 @@
     /* istanbul ignore next */
     if(env === 'development' || env === 'test') {
       app.use(require('connect-livereload')());
-      app.use(require('errorhandler')());
     }
   };
 })();
